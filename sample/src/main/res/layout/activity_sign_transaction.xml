@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionAddressTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activitySignTransactionAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="ABCDEFabcdefx0123456789"
+            android:hint="@string/address_hint"
+            android:inputType="text"
+            android:maxLength="42"
+            android:maxLines="1"
+            android:minLines="1"
+            android:singleLine="true"
+            android:text="@string/address_value"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionAddressTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionAmountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionAddress" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activitySignTransactionAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wei_hint"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="@string/amount_value"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionAmountTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionChainIdTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chain_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionAmount" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activitySignTransactionChainId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/chain_id_hint"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionChainIdTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionNonceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nonce"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionChainId" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activitySignTransactionNonce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nonce_hint"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionNonceTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionGasPriceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gas_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionNonce" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activitySignTransactionGasPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wei_hint"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="@string/gas_price_value"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionGasPriceTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionGasLimitTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gas_limit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionGasPrice" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activitySignTransactionGasLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wei_hint"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="@string/gas_limit_value"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionGasLimitTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionDataTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionGasLimit" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activitySignTransactionData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/data_hint"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionDataTitle" />
+
+        <CheckBox
+            android:id="@+id/activitySignTransactionSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_transaction"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionData" />
+
+        <View
+            android:id="@+id/activitySignTransactionDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionSend" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionHex"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/signed_transaction"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/activitySignTransactionSign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activitySignTransactionDivider" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activitySignTransactionSign"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_style"
+            android:gravity="center"
+            android:text="@string/sign"
+            android:textColor="@drawable/text_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

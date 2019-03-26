@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lumi SDK</string>
+    <string name="market_address" translatable="false">market://details?id=com.lumicollect.android</string>
+    <string name="google_play_address" translatable="false">https://play.google.com/store/apps/details?id=com.lumicollect.android</string>
+</resources>
